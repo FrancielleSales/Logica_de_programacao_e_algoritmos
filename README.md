@@ -191,7 +191,7 @@ São duas ferramentas que podem ser usadas em conjunto. O Git é utilizado para 
 <a href="https://www.udemy.com/course/git-e-github-para-iniciantes/"> Clique aqui para acessar um curso gratuito de Git e Github</a>
 </p>
 
-### Passo a passo para atualizar o arquivo README.MD no github, após escrevê-lo no Visual Studio Code, utilizando comandos Git
+### Passo a passo para atualizar arquivos no github após usá-los no Visual Studio Code, utilizando comandos Git
 
 1. Editar o arquivo no Visual Studio Code;
 2. Inserir a alteração no repositório local: git add .
@@ -242,6 +242,9 @@ O prompt de comando é um aplicativo que permite a execução de comandos com o 
 </p>
 
 # Capítulo 2: Lógica de programação <a name="capitulo2"></a>
+
+
+
 # Capítulo 3: Programação orientada a objetos <a name="capitulo3"></a>
 # Capítulo 4 Java avançado <a name="capitulo4"></a>
 # Capítulo 5: Banco de dados relacional <a name="capitulo5"></a>
