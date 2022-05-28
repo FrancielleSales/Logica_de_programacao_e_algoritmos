@@ -3,7 +3,7 @@
 ## Repositório para sincronização de arquivos, documentos e projetos do treinamento no curso de Java no E21/2022.
 
 <p>
-    <img src = "https://user-images.githubusercontent.com/100395899/170827116-115d212b-0113-4541-b468-333d907ca8c9.png" width="1100px" hight="375px>
+    <img src = "https://user-images.githubusercontent.com/100395899/170827116-115d212b-0113-4541-b468-333d907ca8c9.png" width="1100px" hight="375px">
 </p>
 
 ## Contatos
@@ -242,9 +242,6 @@ O prompt de comando é um aplicativo que permite a execução de comandos com o 
 </p>
 
 # Capítulo 2: Lógica de programação <a name="capitulo2"></a>
-
-
-
 # Capítulo 3: Programação orientada a objetos <a name="capitulo3"></a>
 # Capítulo 4 Java avançado <a name="capitulo4"></a>
 # Capítulo 5: Banco de dados relacional <a name="capitulo5"></a>
