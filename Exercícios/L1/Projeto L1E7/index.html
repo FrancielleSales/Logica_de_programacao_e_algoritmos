@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L1E7</title>
+    </head>
+    
+	<body>
+
+		<h1 align="center">Calculate the selling price</h1>
+		<hr>
+
+	    <form action="" align="center">
+
+            <label for="idprice">Enter the purchase price</label><br>
+            <input type="number" id="idprice" name="nmprice">
+            <br><br>
+
+            <label for="idcosts">Enter the costs</label><br>
+            <input type="costs" id="idcosts" name="nmcosts">
+            <br><br>
+
+            <input type="button" onclick="sellingPrice()" value="Calculate the selling price">
+            <br><br>
+
+            <label for="idresult">Result</label><br>
+            <input type="number" id="idresult" name="nmresult">
+
+	    </form>
+
+	    <script>
+
+            function sellingPrice(){
+                var price = Number(document.getElementById("idprice").value);
+                var costs = Number(document.getElementById("idcosts").value);
+
+
+                var result = (price + costs)*1.35
+
+                document.getElementById("idresult").value = result;
+		    }
+
+
+	    </script>
+	</body>
+</html>
