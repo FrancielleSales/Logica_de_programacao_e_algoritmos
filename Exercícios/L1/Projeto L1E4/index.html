@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L1E4</title>
+    </head>
+    
+	<body>
+	    <form action="">
+
+            <label for="idheight">Enter your height</label><br>
+            <input type="number" id="idheight" name="nmheight">
+            <br><br>
+
+            <label for="idweight">Enter your weight</label><br>
+            <input type="number" id="idweight" name="nmweight">
+            <br><br>
+
+            <input type="button" onclick="imc()" value="Calculate your IMC">
+            <br><br>
+
+            <label for="idresult">Result</label><br>
+            <input type="number" id="idresult" name="nmresult">
+            <br><br>
+
+            <label for="idmeaning">Meaning</label><br>
+            <input type="text" id="idmeaning" name="nmmeaning">
+            <br><br>
+
+	    </form>
+
+	    <script>
+
+            function imc(){
+                var height = Number(document.getElementById("idheight").value);
+                var weight = Number(document.getElementById("idweight").value);
+
+                var result = weight / height**2;
+
+                var meaning;
+
+                if(result > 40){
+                    var meaning = "Obesity grade III";                  
+                }else if(result >= 35){
+                    var meaning = "Obesity grade II";                  
+                }else if(result >= 30){
+                    var meaning = "Obesity grade I";                  
+                }else if(result >= 25){
+                    var meaning = "Overweight"; 
+                }else if(result >= 18.5){
+                    var meaning = "Normal weight";
+                }else{
+                    var meaning = "Under weight";
+                }
+
+                document.getElementById("idresult").value = result;
+		        document.getElementById("idmeaning").value = meaning;
+
+		    }
+
+	    </script>
+	</body>
+</html>
