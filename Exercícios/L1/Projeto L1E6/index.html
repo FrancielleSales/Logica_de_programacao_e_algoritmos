@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L1E6</title>
+    </head>
+    
+	<body>
+
+		<h1 align="center">Calculate the grade</h1>
+		<hr>
+
+	    <form action="" align="center">
+
+            <label for="idgrade1">Enter the grade 1</label><br>
+            <input type="number" id="idgrade1" name="nmgrade1">
+            <br><br>
+
+            <label for="idgrade2">Enter the grade 2</label><br>
+            <input type="number" id="idgrade2" name="nmgrade2">
+            <br><br
+
+            <label for="idgrade3">Enter the grade 3</label><br>
+            <input type="number" id="idgrade3" name="nmgrade3">
+            <br><br>
+
+            <label for="idgrade4">Enter the grade 4</label><br>
+            <input type="number" id="idgrade4" name="nmgrade4">
+            <br><br>
+
+            <input type="button" onclick="grade()" value="Calculate the grade">
+            <br><br>
+
+            <label for="idresult">Result</label><br>
+            <input type="number" id="idresult" name="nmresult">
+
+	    </form>
+
+	    <script>
+
+            function grade(){
+                var grade1 = Number(document.getElementById("idgrade1").value);
+                var grade2 = Number(document.getElementById("idgrade2").value);
+                var grade3 = Number(document.getElementById("idgrade3").value);
+                var grade4 = Number(document.getElementById("idgrade4").value);
+
+                var result = (grade1 + grade2 + grade3 + grade4) / 4
+
+		console.log(result)
+
+
+                document.getElementById("idresult").value = result;
+		    }
+
+
+	    </script>
+	</body>
+</html>
