@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L2E1</title></head>
+<body>
+
+		<h1 align="center">Divide number greather than 20 by 2</h1>
+		<hr>
+
+	<form action="" align="center">
+        <label for="idnumber">Enter a number</label><br>
+        <input type="number" name="nmnumber" id="idnumber">
+        <br><br>
+
+        <input type="button" value="Check" onclick="checkNumber()">
+
+        <label for="idresult">Result</label><br>
+        <input type="number" id="idresult" name="nmresult">
+        
+    </form>
+
+    <script>
+        function checkNumber(){
+            var number = Number(document.getElementById("idnumber").value);
+            var result; 
+
+            if(number > 20) {
+                result = number / 2;
+            }else{
+                resultado = number;
+            }
+
+            document.getElementById("idOut").value = "Resultado: " + resultado;
+
+        }
+
+    </script>
+</body>
+</html>
