@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L5E10</title>
+    </head>
+    <body>
+
+		<h1 align="center">Currency converter</h1>
+		<hr><br><br>
+
+	    <form action="" align="center">
+
+            <label for="idInputValue">Enter the value you want to convert</label><br>
+            <input type="number" id="idInputValue" name="nmInputValue">
+            <br><br>
+
+            <label for="SelectInput">Select the input currency</label><br>
+            <select name="nmSelectInput" id="idSelectInput">
+                <option value="inputR">Real</option>
+                <option value="inputUS">US Dollar</option>
+                <option value="inputE">Euro</option>
+                <option value="inputBP">British pound</option>
+                <option value="inputCD">Canadian Dollar</option>
+            </select>
+            <br><br>
+
+            <label for="idSelectOutput">Select the output currency</label><br>
+            <select name="nmSelectOutput" id="idSelectOutput">
+                <option value="outputR">Real</option>
+                <option value="outputUS">US Dollar</option>
+                <option value="outputE">Euro</option>
+                <option value="outputBP">British pound</option>
+                <option value="outputCD">Canadian Dollar</option>
+            </select>
+            <br><br>
+
+            <input type="button" value="Do the conversion" onclick="conversion()">
+            <br><br>
+
+            <label for="idResult">Result</label><br>
+            <input type="number" id="idResult" name="nmResult">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+            <output id="idOut">Quote date used: 05/30/2022</output>
+
+        </form>
+
+        <script>
+            function conversion(){
+
+                var Real = 4.721;
+                var USDollar = 1; 
+                var Euro = 0.9276;
+                var CanadianDollar = 1.2657;
+                var BritishPound = 0.7899;
+
+                var Result;
+
+                var InputValue = Number(document.getElementById("idInputValue").value);
+                var idSelectInput = document.getElementById("idSelectInput").value;
+                var idSelectOutput = document.getElementById("idSelectOutput").value;
+
+                function InputCurrency(){
+                    switch(idSelectInput){
+                        case "inputUS":
+                            return USDollar;
+                            break;
+                        case "inputE":
+                            return Euro;
+                            break;
+                        case "inputBP":
+                            return BritishPound;
+                            break;
+                        case "inputCD":
+                            return CanadianDollar;
+                            break;
+                        case "inputR":
+                            return Real;
+                            break;
+                    }
+                }
+
+                function OutputCurrency (){
+                    switch(idSelectOutput){
+                        case "outputUS":
+                            return USDollar;
+                            break;
+                        case "outputE":
+                            return Euro;
+                            break;
+                        case "outputBP":
+                            return BritishPound;
+                            break;
+                        case "outputCD":
+                            return CanadianDollar;
+                            break;
+                        case "outputR":
+                            return Real;
+                            break;
+                    }
+                }
+                    
+                Result = (InputValue * (1/InputCurrency()) * OutputCurrency());
+                document.getElementById("idResult").value = Result.toFixed(2);
+	        }
+
+        </script>       
+    </body>
+</html>
