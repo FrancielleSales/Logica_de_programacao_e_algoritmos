@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L2E2</title></head>
+<body>
+
+		<h1 align="center">Find out if you can drive</h1>
+		<hr><br><br>
+
+	<form action="" align="center">
+        <label for="idAge">Enter your age</label><br>
+        <input type="number" name="nmAge" id="idAge">
+        <br><br>
+
+        <label for="idDriverLicense">Do you have a driver license?</label><br>
+
+        <input type="radio" name="nmYes" id="idYes">
+        <label for="idYes">Yes</label>        
+        <br>
+
+        <input type="radio" name="nmNo" id="idNo">
+        <label for="idNo">No</label>        
+        <br><br>
+
+        <input type="button" value="Click here to find out!" onclick="findOut()">
+        <br><br>
+
+        <label for="idResult">Result</label><br>
+        <input type="text" id="idResult" name="nmResult">
+        
+    </form>
+
+    <script>
+        function findOut(){
+            var age = Number(document.getElementById("idAge").value);
+            var driverLicense = document.getElementById("idYes").checked;
+            var result; 
+
+            console.log(age);
+            console.log(driverLicense);
+
+            if(age >= 18 && driverLicense) {
+                console.log(0);
+                result = "Congratulations! You can drive!";
+                console.log(1);
+            }else{
+                result = "You can't drive!";
+            }
+            document.getElementById("idResult").value = result;
+
+        }
+
+    </script>
+</body>
+</html>

@@ -8,17 +8,18 @@
 <body>
 
 		<h1 align="center">Divide number greather than 20 by 2</h1>
-		<hr>
+		<hr><br>
 
 	<form action="" align="center">
         <label for="idnumber">Enter a number</label><br>
         <input type="number" name="nmnumber" id="idnumber">
         <br><br>
 
-        <input type="button" value="Check" onclick="checkNumber()">
+        <input type="button" value="Calculate" onclick="checkNumber()">
+        <br><br>
 
-        <label for="idresult">Result</label><br>
-        <input type="number" id="idresult" name="nmresult">
+        <label for="idResult">Result</label><br>
+        <input type="number" id="idResult" name="nmResult">
         
     </form>
 
@@ -30,10 +31,10 @@
             if(number > 20) {
                 result = number / 2;
             }else{
-                resultado = number;
+                result = number;
             }
 
-            document.getElementById("idOut").value = "Resultado: " + resultado;
+        document.getElementById("idResult").value = result;
 
         }
 
