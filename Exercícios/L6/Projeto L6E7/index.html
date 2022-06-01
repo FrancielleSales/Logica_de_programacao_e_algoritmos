@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L6E7</title>
+    </head>
+    <body>
+		<h1 align="center">Includes names</h1>
+		<hr><br><br>
+
+	<form action="" align="center">
+            <label for="idName">Name:</label><br>
+            <input type="text" id="idName">
+            <br><br>
+
+            <input type="button" value="Include" onclick="include()">
+
+            <input type="button" value="Report" onclick="report()">
+        </form>
+
+        <script>
+		var names = [];
+
+        function include(){
+            let name = document.getElementById("idName").value;
+            names.push(name);
+            document.getElementById("idName").value = "";
+            console.log(names);
+        }
+
+        function report(){
+            var length = 7;
+            let invertedNames = [];
+
+            for(i = 0; i < length; i++){
+			    invertedNames.unshift(names[i]);
+			    console.log(invertedNames);
+		    }
+
+        }    
+	</script>
+        
+    </body>
+</html>
