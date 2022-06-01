@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L2E3</title></head>
+<body>
+
+		<h1 align="center">Bank registration</h1>
+		<hr><br><br>
+
+	<form action="" align="center">
+        <table align="center">
+            <tr>
+                <td align="left">Name</td>
+                <td><input type="text" name="nmName" id="idName"></td>
+            </tr>
+            <tr>
+                <td align="left">Bank</td>
+                <td><input type="text" name="nmBank" id="idBank"></td>
+            </tr>
+            <tr>
+                <td align="left">Account number</td>
+                <td><input type="number" name="nmAccountNumber" id="idAccountNumber"></td>
+            </tr>
+            <tr>
+                <td align="left">Current balance</td>
+                <td><input type="number" name="nmCurrentBalance" id="idCurrentBalance"></td>
+            </tr>
+            <tr>
+                <td align="left">Credit limit</td>
+                <td><input type="number" name="nmCreditLimit" id="idCreditLimit"></td>
+            </tr>
+            <tr>
+                <td align="left">Credit</td>
+                <td><input type="number" name="nmCredit" id="idCredit"></td>
+            </tr>
+            <tr>
+                <td align="left">Debit</td>
+                <td><input type="number" name="nmDebit" id="idDebit"></td>
+            </tr>
+        </table>
+
+        <br><br><br><br>
+          <input type="button" value="Register" onclick="register()">
+        <br><br><br><br>
+
+        <output id="idStatus">Register Status</output>
+        <br><br><br><br>
+
+        <input type="button" value="Credit" onclick="credit()">
+        <br><br>
+
+        <output id="idResultCredit">Current balance:</output>
+        <br><br><br><br>
+
+        <input type="button" value="Debit" onclick="debit()">
+        <br><br>
+
+        <output id="idResultDebit">Current balance:</output>
+
+    </form>
+
+    <script>
+        function register(){
+            var name = document.getElementById("idName").value;
+            console.log(name);
+            var bank = document.getElementById("idBank").value;
+            console.log(bank);
+            var accountNumber = Number(document.getElementById("idAccountNumber")).value;
+            var currentBalance = Number(document.getElementById("idCurrentBalance")).value;
+            var creditLimit = (document.getElementById("idCreditLimit")).value;
+            console.log(accountNumber + currentBalance);
+            var credit = (document.getElementById("idCredit")).value;
+            var debit = (document.getElementById("idDebit")).value;
+            console.log(debit);
+
+            document.getElementById("idStatus").value = "Successfully registered!";
+        }
+
+        function credit(){
+            var currentBalance = parseFloat(document.getElementById("idCurrentBalance")).value;
+            var credit = parseFloat(document.getElementById("idCredit")).value;
+            var result = currentBalance + credit;
+            console.log(result);
+
+            console.log(currentBalance);
+
+            document.getElementById("idResultCredit").value = result;
+        }
+
+    </script>
+</body>
+</html>
