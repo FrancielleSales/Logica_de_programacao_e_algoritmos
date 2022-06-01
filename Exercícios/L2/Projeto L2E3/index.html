@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L2E3</title></head>
+<body>
+
+		<h1 align="center">Three days temperature</h1>
+		<hr><br><br>
+
+	<form action="" align="center">
+        <label for="idTemperatureDay1">Enter the temperature of the first day (°C)</label><br>
+        <input type="number" name="nmTemperatureDay1" id="idTemperatureDay1">
+        <br><br>
+
+        <label for="idTemperatureDay2">Enter the temperature of the second day (°C)</label><br>
+        <input type="number" name="nmTemperatureDay2" id="idTemperatureDay2">
+        <br><br>
+
+        <label for="idTemperatureDay3">Enter the temperature of the third day (°C)</label><br>
+        <input type="number" name="nmTemperatureDay3" id="idTemperatureDay3">
+        <br><br>
+
+        <label for="idTemperatureToday">Enter today's temperature (°C)</label><br>
+        <input type="number" name="nmTemperatureToday" id="idTemperatureToday">
+        <br><br>       
+
+        <input type="button" value="Calculate" onclick="calculate()">
+        <br><br>
+
+        <output id="idDay1">Temperature Day 1:</output>
+        <br>
+
+        <output id="idDay2">Temperature Day 2:</output>
+        <br>
+
+        <output id="idDay3">Temperature Day 3:</output>
+        <br><br>
+
+        <output id="idAverage">Average:</output>
+        <br><br>
+
+        <output id="idComparation">Comparation:</output>
+        <br><br>        
+    </form>
+
+    <script>
+        function calculate(){
+            var result;
+
+            var temperatureDay1 = Number(document.getElementById("idTemperatureDay1").value);
+            var temperatureDay2 = Number(document.getElementById("idTemperatureDay2").value);
+            var temperatureDay3 = Number(document.getElementById("idTemperatureDay3").value);
+            var temperatureToday = Number(document.getElementById("idTemperatureToday").value);
+
+            var average = (temperatureDay1 + temperatureDay2 + temperatureDay3)/3;
+
+            if( temperatureToday > average) {
+                comparation = "Today's temperature is higher than average";
+            }else if(temperatureToday == average){
+                comparation = "Today's temperature is equal to average";
+            }else{
+                temperatureToday>= average
+                comparation = "Today's temperature is lower than average";
+            }
+
+            document.getElementById("idDay1").value = "Temperature Day 1: " + temperatureDay1 + " (°C)";
+            document.getElementById("idDay2").value = "Temperature Day 2: " + temperatureDay2 + " (°C)";
+            document.getElementById("idDay3").value = "Temperature Day 3: " + temperatureDay3 + " (°C)";
+
+            document.getElementById("idAverage").value = "Average: " + average + " (°C)";
+
+            document.getElementById("idComparation").value = comparation;
+
+        }
+
+    </script>
+</body>
+</html>
