@@ -4,34 +4,23 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>L6E5</title>
+        <title>L6E6</title>
     </head>
     <body>
 
-	<script>
+        <script>
 
-		var length = 16;
+		var length = 7;
 		var numbers = [];
-		var a = 0;
-		var b = 1;
-		var c;
 
-		for(i = 0; i < length; i ++){
-			if(i <= 1){
-				numbers[i] = b;
-				console.log(numbers[i]);
-			}else{
-				c = a + b;
-				a = b;
-				b = c;
-				numbers[i] = a + b;
-				console.log(numbers[i]);
-			}
+		for(i = 0; i< length; i++){
+			numbers[i] = Math.floor(Math.random() * 65536);
+			console.log(numbers[i]);
 		}
 
 		console.log(numbers);
-
-	</script>
+            
+        </script>
         
     </body>
 </html>
