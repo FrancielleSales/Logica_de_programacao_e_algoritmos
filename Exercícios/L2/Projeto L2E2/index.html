@@ -28,8 +28,7 @@
         <input type="button" value="Click here to find out!" onclick="findOut()">
         <br><br>
 
-        <label for="idResult">Result</label><br>
-        <input type="text" id="idResult" name="nmResult">
+        <output id="idResult">Result: </output>
         
     </form>
 
@@ -45,7 +44,7 @@
             }else{
                 result = "You can't drive!";
             }
-            document.getElementById("idResult").value = result;
+            document.getElementById("idResult").value = "Result: " + result;
 
         }
 

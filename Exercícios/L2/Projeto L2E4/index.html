@@ -10,8 +10,8 @@
 		<h1 align="center">Bank registration</h1>
 		<hr><br><br>
 
-	<form action="" align="center">
-        <table align="center">
+	<form action="">
+        <table>
             <tr>
                 <td align="left">Name</td>
                 <td><input type="text" name="nmName" id="idName"></td>
@@ -32,6 +32,17 @@
                 <td align="left">Credit limit</td>
                 <td><input type="number" name="nmCreditLimit" id="idCreditLimit"></td>
             </tr>
+
+        </table>
+
+        <br>
+          <input type="button" value="Register" onclick="register()">
+        <br><br>
+
+        <output id="idStatus">Register Status: </output><br>
+        <br><br><br><br>
+
+        <table>
             <tr>
                 <td align="left">Credit</td>
                 <td><input type="number" name="nmCredit" id="idCredit"></td>
@@ -42,54 +53,58 @@
             </tr>
         </table>
 
-        <br><br><br><br>
-          <input type="button" value="Register" onclick="register()">
-        <br><br><br><br>
-
-        <output id="idStatus">Register Status</output>
-        <br><br><br><br>
-
+        <br>
         <input type="button" value="Credit" onclick="credit()">
-        <br><br>
-
-        <output id="idResultCredit">Current balance:</output>
-        <br><br><br><br>
-
         <input type="button" value="Debit" onclick="debit()">
         <br><br>
 
-        <output id="idResultDebit">Current balance:</output>
+        <output id="idResultCreditDebit">Current balance:</output>
+        <br><br><br><br>
 
     </form>
 
     <script>
         function register(){
-            var name = document.getElementById("idName").value;
-            console.log(name);
-            var bank = document.getElementById("idBank").value;
-            console.log(bank);
-            var accountNumber = Number(document.getElementById("idAccountNumber")).value;
-            var currentBalance = Number(document.getElementById("idCurrentBalance")).value;
-            var creditLimit = (document.getElementById("idCreditLimit")).value;
-            console.log(accountNumber + currentBalance);
-            var credit = (document.getElementById("idCredit")).value;
-            var debit = (document.getElementById("idDebit")).value;
-            console.log(debit);
+            var resultRegister = [];
 
-            document.getElementById("idStatus").value = "Successfully registered!";
+            var name = resultRegister.push(document.getElementById("idName").value);
+            var bank = resultRegister.push(document.getElementById("idBank").value);
+            var accountNumber = resultRegister.push(Number(document.getElementById("idAccountNumber").value));
+            var currentBalance = resultRegister.push(Number(document.getElementById("idCurrentBalance").value));
+            var creditLimit = resultRegister.push(Number(document.getElementById("idCreditLimit").value));
+
+            var status = "Successfully registered!";
+
+            console.log(resultRegister);
+
+            document.getElementById("idStatus").value = "Register Status: " + status;
         }
 
         function credit(){
-            var currentBalance = parseFloat(document.getElementById("idCurrentBalance")).value;
-            var credit = parseFloat(document.getElementById("idCredit")).value;
+            var currentBalance = Number(document.getElementById("idCurrentBalance").value);
+            var credit = Number(document.getElementById("idCredit").value);
+
             var result = currentBalance + credit;
-            console.log(result);
 
-            console.log(currentBalance);
-
-            document.getElementById("idResultCredit").value = result;
+            document.getElementById("idResultCreditDebit").value = "New current balance: R$ " + result;
+            document.getElementById("idCurrentBalance").value = result;
         }
 
+        function debit(){
+            var currentBalance = Number(document.getElementById("idCurrentBalance").value);
+            var creditLimit = Number(document.getElementById("idCreditLimit").value);
+            var debit = Number(document.getElementById("idDebit").value);
+
+            var respectLimit = currentBalance + creditLimit
+
+            if(debit <= respectLimit ){
+                var result = currentBalance - debit;
+                document.getElementById("idResultCreditDebit").value = "New current balance: R$ " + result;
+                document.getElementById("idCurrentBalance").value = result;
+            }else{
+                document.getElementById("idResultCreditDebit").value = "You cannot debit this amount! He goes over your credit limit";                
+            }    
+        }
     </script>
 </body>
 </html>
