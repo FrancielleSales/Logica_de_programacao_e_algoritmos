@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L5E2</title>
+    </head>
+    <body>
+
+		<h1 align="center">Prime numbers</h1>
+		<hr><br><br>
+
+	    <form action="" align="center">
+            <label for="idStartingNumber">Enter the first number in the range</label><br>
+            <input type="number" id="idStartingNumber" name="nmStartingNumber">
+            <br><br>
+
+            <label for="idFinalNumber">Enter the first number in the range</label><br>
+            <input type="number" id="idFinalNumber" name="nmFinalNumber">
+            <br><br>
+
+            <input type="button" value="Prime numbers" onclick="primeNumbers()">
+            <br><br>
+
+            <output id="idResult">Result: </output>
+        </form>
+        <script>
+            function primeNumbers(){
+                var startingNumber = Number(document.getElementById("idStartingNumber").value);
+                var finalNumber = Number(document.getElementById("idFinalNumber").value);
+                console.log(startingNumber);
+                console.log(finalNumber);
+                var i, j;
+                var result = [];
+                isPrimo = true;
+
+                for(i = startingNumber; i <= finalNumber; i++){
+                    for(j = 2; j <= (finalNumber**(1/2)); j++){
+                        if(i % j == 0){
+                            isPrimo = false;
+                        }
+                    }
+                    if(isPrimo){
+                        result.push(i);
+                        console.log(result);
+                    }
+                    isPrimo = true;
+                }
+            
+            document.getElementById("idResult").value = "Result: " + result;
+            }
+        </script>
+    </body>
+</html>
