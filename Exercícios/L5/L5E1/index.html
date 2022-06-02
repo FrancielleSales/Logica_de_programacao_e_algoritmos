@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L5E7</title>
+    </head>
+    <body>
+
+		<h1 align="center">Multiples of 3 and 5</h1>
+		<hr><br><br>
+
+        <form action="" align="center">
+
+        <input type="button" value="Click" onclick="print()">
+        <br><br>        
+
+        </form>
+        <script>
+            function print() {
+                i = 1;
+
+                while (i <= 100){
+                    if(i % 3 == 0 || i % 5 == 0){
+                        console.log(i);
+                    }
+                    i++;
+                }
+	        }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L5E8</title>
+    </head>
+    <body>
+
+		<h1 align="center">Convert from celsius to Fahrenheit</h1>
+		<hr><br><br>
+
+	    <form action="" align="center">
+
+            <label for="idTemperature">Enter the temperature in Celcius</label><br>
+            <input type="number" id="idTemperature" name="nmTemperature">
+            <br><br>
+
+            <input type="button" value="Do the conversion" onclick="conversion()">
+            <br><br>
+
+            <label for="idResult">Result</label><br>
+            <input type="number" id="idResult" name="nmResult">
+            <br><br>
+
+        </form>
+
+        <script>
+            function conversion(){
+		        var Result;
+                var Temperature = Number(document.getElementById("idTemperature").value);
+                
+			    Result = Temperature * 1.8 + 32;                    
+
+                document.getElementById("idResult").value = Result;
+	        }
+        </script>
+        
+    </body>
+</html>

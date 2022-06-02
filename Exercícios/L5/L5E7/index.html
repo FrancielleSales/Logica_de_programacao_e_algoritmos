@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L5E7</title>
+    </head>
+    <body>
+
+		<h1 align="center">Guess the number</h1>
+		<hr><br><br>
+
+	    <form action="" align="center">
+
+            <label for="idGuess">Enter a number from 1 to 10</label><br>
+            <input type="number" id="idGuess" name="nmGuess">
+            <br><br>
+
+            <input type="button" value="Check!" onclick="attempts()">
+            <br><br>
+
+            <output id="idComparation">Comparation:</output>
+            <br>
+
+            <output id="idResult">Result:</output>
+            <br>
+        </form>
+        <script>
+            function random(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+
+            var rightNumber = random(1, 10);
+            var rightNumber;
+
+            function attempts(){
+                var numberOfAttempts = 3;
+                var attempt = Number(document.getElementById("idGuess").value);
+                console.log(rightNumber);
+		        var result;
+                var comparation;
+                var i = 0;
+
+                while(i < 3){
+                    if (attempt == rightNumber){
+                        comparation = "Congratulations!";
+                        result = "You're right!";
+                        i = 3;
+                    }else{
+                        if (i < 3){
+                            if (rightNumber > attempt){
+                                comparation = "The number you entered is lower!";
+                                result = "Try again!"
+                            }else{
+                                comparation = "The number you entered is higher!";
+                                result = "Try again!";
+                            }
+                        }else{
+                            comparation = "Sorry!";
+                            result = "Game over!"
+                        }
+                    }
+                    i++;     
+                }                   
+                document.getElementById("idResult").value = "Result: " + result;
+                document.getElementById("idComparation").value = "Comparation: " + comparation;
+	        }
+        </script>
+        
+    </body>
+</html>
