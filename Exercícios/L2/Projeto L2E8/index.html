@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L2E8</title>
+    </head>
+    <body>
+        <h1 align="center">Find out if the year is a leap year</h1>
+        <hr><br>
+        
+        <form action="" align="center">
+            <label for="idYear">Enter the year</label><br>
+            <input type="number" id="idYear" name="nmYear">
+            <br><br>
+
+            <input type="button" value = "Check" onclick="checkYear()">
+            <br><br>
+
+            <output id="idResult">Result:</output>
+        </form>
+        <script>
+            function checkYear(){
+                var year = Number(document.getElementById("idYear").value);
+
+                if(year % 4 == 0){
+                    var result = "The year entered is a leap year";
+                }else{
+                    var result = "The year entered is not a leap year";
+                }
+            document.getElementById("idResult").value = "Result: " + result;
+            }
+        </script>
+    </body>
+
+</html>

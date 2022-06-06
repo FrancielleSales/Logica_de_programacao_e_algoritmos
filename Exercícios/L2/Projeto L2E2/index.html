@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L2E2</title></head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L2E2</title>
+    </head>
+    <body>
 
-		<h1 align="center">Find out if you can drive</h1>
-		<hr><br><br>
+            <h1 align="center">Find out if you can drive</h1>
+            <hr><br><br>
 
-	<form action="" align="center">
-        <label for="idAge">Enter your age</label><br>
-        <input type="number" name="nmAge" id="idAge">
-        <br><br>
+        <form action="" align="center">
+            <label for="idAge">Enter your age</label><br>
+            <input type="number" name="nmAge" id="idAge">
+            <br><br>
 
-        <label for="idDriverLicense">Do you have a driver license?</label><br>
+            <label for="idDriverLicense">Do you have a driver license?</label><br>
 
-        <input type="radio" name="nmYes" id="idYes">
-        <label for="idYes">Yes</label>        
-        <br>
+            <input type="radio" name="nmYes" id="idYes">
+            <label for="idYes">Yes</label>        
+            <br>
 
-        <input type="radio" name="nmNo" id="idNo">
-        <label for="idNo">No</label>        
-        <br><br>
+            <input type="radio" name="nmNo" id="idNo">
+            <label for="idNo">No</label>        
+            <br><br>
 
-        <input type="button" value="Click here to find out!" onclick="findOut()">
-        <br><br>
+            <input type="button" value="Click here to find out!" onclick="findOut()">
+            <br><br>
 
-        <output id="idResult">Result: </output>
-        
-    </form>
+            <output id="idResult">Result: </output>
+            
+        </form>
 
-    <script>
-        function findOut(){
-            var age = Number(document.getElementById("idAge").value);
-            var driverLicense = document.getElementById("idYes").checked;
-            var result; 
+        <script>
+            function findOut(){
+                var age = Number(document.getElementById("idAge").value);
+                var driverLicense = document.getElementById("idYes").checked;
+                var result; 
 
-            if(age >= 18 && driverLicense) {
-                result = "Congratulations! You can drive!";
+                if(age >= 18 && driverLicense) {
+                    result = "Congratulations! You can drive!";
 
-            }else{
-                result = "You can't drive!";
+                }else{
+                    result = "You can't drive!";
+                }
+                document.getElementById("idResult").value = "Result: " + result;
+
             }
-            document.getElementById("idResult").value = "Result: " + result;
 
-        }
-
-    </script>
-</body>
+        </script>
+    </body>
 </html>

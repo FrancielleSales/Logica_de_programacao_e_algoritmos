@@ -1,110 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L2E4</title></head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L2E4</title>
+    </head>
+    <body>
 
-		<h1 align="center">Bank registration</h1>
-		<hr><br><br>
+            <h1 align="center">Bank registration</h1>
+            <hr><br><br>
 
-	<form action="">
-        <table>
-            <tr>
-                <td align="left">Name</td>
-                <td><input type="text" name="nmName" id="idName"></td>
-            </tr>
-            <tr>
-                <td align="left">Bank</td>
-                <td><input type="text" name="nmBank" id="idBank"></td>
-            </tr>
-            <tr>
-                <td align="left">Account number</td>
-                <td><input type="number" name="nmAccountNumber" id="idAccountNumber"></td>
-            </tr>
-            <tr>
-                <td align="left">Current balance</td>
-                <td><input type="number" name="nmCurrentBalance" id="idCurrentBalance"></td>
-            </tr>
-            <tr>
-                <td align="left">Credit limit</td>
-                <td><input type="number" name="nmCreditLimit" id="idCreditLimit"></td>
-            </tr>
+        <form action="">
+            <table>
+                <tr>
+                    <td align="left">Name</td>
+                    <td><input type="text" name="nmName" id="idName"></td>
+                </tr>
+                <tr>
+                    <td align="left">Bank</td>
+                    <td><input type="text" name="nmBank" id="idBank"></td>
+                </tr>
+                <tr>
+                    <td align="left">Account number</td>
+                    <td><input type="number" name="nmAccountNumber" id="idAccountNumber"></td>
+                </tr>
+                <tr>
+                    <td align="left">Current balance</td>
+                    <td><input type="number" name="nmCurrentBalance" id="idCurrentBalance"></td>
+                </tr>
+                <tr>
+                    <td align="left">Credit limit</td>
+                    <td><input type="number" name="nmCreditLimit" id="idCreditLimit"></td>
+                </tr>
 
-        </table>
+            </table>
 
-        <br>
-          <input type="button" value="Register" onclick="register()">
-        <br><br>
+            <br>
+            <input type="button" value="Register" onclick="register()">
+            <br><br>
 
-        <output id="idStatus">Register Status: </output><br>
-        <br><br><br><br>
+            <output id="idStatus">Register Status: </output><br>
+            <br><br><br><br>
 
-        <table>
-            <tr>
-                <td align="left">Credit</td>
-                <td><input type="number" name="nmCredit" id="idCredit"></td>
-            </tr>
-            <tr>
-                <td align="left">Debit</td>
-                <td><input type="number" name="nmDebit" id="idDebit"></td>
-            </tr>
-        </table>
+            <table>
+                <tr>
+                    <td align="left">Credit</td>
+                    <td><input type="number" name="nmCredit" id="idCredit"></td>
+                </tr>
+                <tr>
+                    <td align="left">Debit</td>
+                    <td><input type="number" name="nmDebit" id="idDebit"></td>
+                </tr>
+            </table>
 
-        <br>
-        <input type="button" value="Credit" onclick="credit()">
-        <input type="button" value="Debit" onclick="debit()">
-        <br><br>
+            <br>
+            <input type="button" value="Credit" onclick="credit()">
+            <input type="button" value="Debit" onclick="debit()">
+            <br><br>
 
-        <output id="idResultCreditDebit">Current balance:</output>
-        <br><br><br><br>
+            <output id="idResultCreditDebit">Current balance:</output>
+            <br><br><br><br>
 
-    </form>
+        </form>
 
-    <script>
-        function register(){
-            var resultRegister = [];
+        <script>
+            function register(){
+                var resultRegister = [];
 
-            var name = resultRegister.push(document.getElementById("idName").value);
-            var bank = resultRegister.push(document.getElementById("idBank").value);
-            var accountNumber = resultRegister.push(Number(document.getElementById("idAccountNumber").value));
-            var currentBalance = resultRegister.push(Number(document.getElementById("idCurrentBalance").value));
-            var creditLimit = resultRegister.push(Number(document.getElementById("idCreditLimit").value));
+                var name = resultRegister.push(document.getElementById("idName").value);
+                var bank = resultRegister.push(document.getElementById("idBank").value);
+                var accountNumber = resultRegister.push(Number(document.getElementById("idAccountNumber").value));
+                var currentBalance = resultRegister.push(Number(document.getElementById("idCurrentBalance").value));
+                var creditLimit = resultRegister.push(Number(document.getElementById("idCreditLimit").value));
 
-            var status = "Successfully registered!";
+                var status = "Successfully registered!";
 
-            console.log(resultRegister);
+                console.log(resultRegister);
 
-            document.getElementById("idStatus").value = "Register Status: " + status;
-        }
+                document.getElementById("idStatus").value = "Register Status: " + status;
+            }
 
-        function credit(){
-            var currentBalance = Number(document.getElementById("idCurrentBalance").value);
-            var credit = Number(document.getElementById("idCredit").value);
+            function credit(){
+                var currentBalance = Number(document.getElementById("idCurrentBalance").value);
+                var credit = Number(document.getElementById("idCredit").value);
 
-            var result = currentBalance + credit;
+                var result = currentBalance + credit;
 
-            document.getElementById("idResultCreditDebit").value = "New current balance: R$ " + result;
-            document.getElementById("idCurrentBalance").value = result;
-        }
-
-        function debit(){
-            var currentBalance = Number(document.getElementById("idCurrentBalance").value);
-            var creditLimit = Number(document.getElementById("idCreditLimit").value);
-            var debit = Number(document.getElementById("idDebit").value);
-
-            var respectLimit = currentBalance + creditLimit
-
-            if(debit <= respectLimit ){
-                var result = currentBalance - debit;
                 document.getElementById("idResultCreditDebit").value = "New current balance: R$ " + result;
                 document.getElementById("idCurrentBalance").value = result;
-            }else{
-                document.getElementById("idResultCreditDebit").value = "You cannot debit this amount! He goes over your credit limit";                
-            }    
-        }
-    </script>
-</body>
+            }
+
+            function debit(){
+                var currentBalance = Number(document.getElementById("idCurrentBalance").value);
+                var creditLimit = Number(document.getElementById("idCreditLimit").value);
+                var debit = Number(document.getElementById("idDebit").value);
+
+                var respectLimit = currentBalance + creditLimit
+
+                if(debit <= respectLimit ){
+                    var result = currentBalance - debit;
+                    document.getElementById("idResultCreditDebit").value = "New current balance: R$ " + result;
+                    document.getElementById("idCurrentBalance").value = result;
+                }else{
+                    document.getElementById("idResultCreditDebit").value = "You cannot debit this amount! He goes over your credit limit";                
+                }    
+            }
+        </script>
+    </body>
 </html>

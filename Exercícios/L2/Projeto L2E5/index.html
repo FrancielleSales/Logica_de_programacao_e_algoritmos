@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L2E5</title></head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L2E5</title>
+    </head>
+    <body>
 
-    <h1 align="center">Odd or even</h1>
-    <hr><br><br>
+        <h1 align="center">Odd or even</h1>
+        <hr><br><br>
 
-    <form action="" align="center">
-        <label for="idNumber">Enter the number you want to verify:</label>
-        <br><br>
+        <form action="" align="center">
+            <label for="idNumber">Enter the number you want to verify:</label>
+            <br><br>
 
-        <input type="number" id="idNumber" name="nmNumber">
-        <br><br><br><br>
+            <input type="number" id="idNumber" name="nmNumber">
+            <br><br><br><br>
 
-        <input type="button" value="Check" onclick="check()">
-        <br><br><br>
+            <input type="button" value="Check" onclick="check()">
+            <br><br><br>
 
-        <output id="idResult">Result: </output>
-    </form>
-    <script>
-        function check(){
-            var number = Number(document.getElementById("idNumber").value);
+            <output id="idResult">Result: </output>
+        </form>
+        <script>
+            function check(){
+                var number = Number(document.getElementById("idNumber").value);
 
-            if((number % 2) == 0){
-                result = "Even!"
-            }else{
-                result = "Odd!"
+                if((number % 2) == 0){
+                    result = "Even!"
+                }else{
+                    result = "Odd!"
+                }
+            
+            document.getElementById("idResult").value = "Result: " + result;
+            
+            
             }
-        
-        document.getElementById("idResult").value = "Result: " + result;
-        
-        
-        }
-    </script>
+        </script>
+    </body>
+</html>

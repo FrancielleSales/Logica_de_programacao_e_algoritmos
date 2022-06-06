@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L2E10</title>
+    </head>
+    <body>
+        <h1 align="center">Check if it is possible to form a triangle</h1>
+        <hr><br>
+        
+        <form action="" align="center">
+            <label for="idSide1">Enter the measurement of the first side:</label><br>
+            <input type="number" id="idSide1" name="nmSide1">
+            <br><br>
+
+            <label for="idSide2">Enter the measurement of the second side:</label><br>
+            <input type="number" id="idSide2" name="nmSide2">
+            <br><br>
+
+            <label for="idSide3">Enter the measurement of the third side:</label><br>
+            <input type="number" id="idSide3" name="nmSide3">
+            <br><br>
+
+            <input type="button" value = "Check" onclick="checkTriangle()">
+            <br><br>
+
+            <output id="idResult">Result:</output>
+        </form>
+        <script>
+            function checkTriangle(){
+                var side1 = Number(document.getElementById("idSide1").value);
+                var side2 = Number(document.getElementById("idSide2").value);
+                var side3 = Number(document.getElementById("idSide3").value);
+
+                var checkSide1 = side2 + side3;
+                var checkSide2 = side1 + side3;
+                var checkSide3 = side1 + side2;
+
+                if(side1 < checkSide1 && side2 < checkSide2 && side3 < checkSide3){
+                    var result = "It's possible!";
+                }else{
+                    var result = "It's not possible!";
+                }
+            document.getElementById("idResult").value = "Result: " + result;
+            }
+        </script>
+    </body>
+
+</html>

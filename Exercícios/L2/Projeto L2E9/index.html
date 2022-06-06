@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L2E9</title>
+    </head>
+    <body>
+        <h1 align="center">Military enlistment</h1>
+        <hr><br>
+        
+        <form action="" align="center">
+            <label for="ididYearOfBirth">Enter the year you were born</label><br>
+            <input type="number" id="idYearOfBirth" name="nmYearOfBirth">
+            <br><br>
+
+            <input type="button" value = "Check" onclick="checkEnlistment()">
+            <br><br>
+
+            <output id="idResult">Result:</output>
+        </form>
+        <script>
+            function checkEnlistment(){
+                var yearOfBirth = Number(document.getElementById("idYearOfBirth").value);
+                var currentYear = 2022;
+                var age = currentYear - yearOfBirth;
+                var result, message;
+
+                if(age < 18){
+                    result = 18 - age;
+                    message = " years to enlist"
+                }else if(age == 18){
+                    result = "You must enlist this year. ";
+                    message = "This is the year!";
+                }else{
+                    result = age - 18;
+                    message = " years have passed since enlistment";
+                }
+            document.getElementById("idResult").value = result + message;
+            }
+        </script>
+    </body>
+
+</html>
