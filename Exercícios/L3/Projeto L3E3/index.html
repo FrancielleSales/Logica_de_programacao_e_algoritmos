@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L3E3</title>
+    </head>
+    <body>
+        <h1 align="center">Comparing with de number 20</h1>
+        <hr><br>
+        
+        <form action="" align="center">
+            <label for="idNumber">Enter the number:</label><br>
+            <input type="number" id="idNumber" name="nmNumber">
+            <br><br>
+
+            <input type="button" id="idCheck" value="Check" onclick="compareWith20()">
+            <br><br>
+
+            <output id="idResult">Result:</output>
+        </form>
+        <script>
+            function compareWith20(){
+                var number = Number(document.getElementById("idNumber").value);
+                var result;
+
+                if(number > 20){
+                    result = "Greater than 20";
+                }else if (number < 20){
+                    result = "Less than 20";
+                }else{
+                    result = "Equal to 20";
+                }
+            document.getElementById("idResult").value = "Result: " + result;
+            }
+        </script>
+    </body>
+</html>

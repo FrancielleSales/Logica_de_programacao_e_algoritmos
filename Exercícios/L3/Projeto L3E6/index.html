@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L3E6</title>
+    </head>
+    <body>
+        <h1 align="center">Calculator</h1>
+        <hr><br>
+        
+        <form action="" align="center">
+            <label for="idNumber1">Enter the first number:</label><br>
+            <input type="number" id="idNumber1" name="nmNumber1">
+            <br><br>
+
+            <label for="idNumber2">Enter the second number:</label><br>
+            <input type="number" id="idNumber2" name="nmNumber2">
+            <br><br>
+
+            <input type="button" id="idSum" value=" + " onclick="sum()">
+
+            <input type="button" id="idSub" value=" - " onclick="sub()">
+
+            <input type="button" id="idMult" value=" * " onclick="mult()">
+
+            <input type="button" id="idDiv" value=" / " onclick="div()">
+            <br><br>
+
+            <output id="idResult">Result:</output>
+        </form>
+        <script>
+            function sum(){
+                var number1 = Number(document.getElementById("idNumber1").value);
+                var number2 = Number(document.getElementById("idNumber2").value);
+                var result;
+
+                result = number1 + number2;
+
+                document.getElementById("idResult").value = "Result: " + result;
+            }
+            function sub(){
+                var number1 = Number(document.getElementById("idNumber1").value);
+                var number2 = Number(document.getElementById("idNumber2").value);
+                var result;
+
+                result = number1 - number2;
+
+                document.getElementById("idResult").value = "Result: " + result;
+            }
+            function mult(){
+                var number1 = Number(document.getElementById("idNumber1").value);
+                var number2 = Number(document.getElementById("idNumber2").value);
+                var result;
+
+                result = number1 * number2;
+
+                document.getElementById("idResult").value = "Result: " + result;
+            }
+            function div(){
+                var number1 = Number(document.getElementById("idNumber1").value);
+                var number2 = Number(document.getElementById("idNumber2").value);
+                var result;
+
+                result = number1 / number2;
+
+                document.getElementById("idResult").value = "Result: " + result;
+            }
+        </script>
+    </body>
+</html>

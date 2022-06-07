@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L3E7</title>
+    </head>
+    <body>
+        <h1 align="center">Calculate net salary</h1>
+        <hr><br>
+        
+        <form action="" align="center">
+            <label for="idGrossSalary">Enter gross salary:</label><br>
+            <input type="number" id="idGrossSalary" name="nmGrossSalary">
+            <br><br>
+
+            <input type="button" id="idCalculate" value="Calculate" onclick="netSalary()">
+            <br><br>
+
+            <output id="idResult">Result:</output>
+        </form>
+        <script>
+            function netSalary(){
+                var grossSalary = Number(document.getElementById("idGrossSalary").value);
+                var result;
+
+                if(grossSalary > 2000){
+                    result = grossSalary * 0.65;
+                }else if (grossSalary > 1200){
+                    result = grossSalary * 0.70;
+                }else if(grossSalary > 600){
+                    result = grossSalary * 0.75;
+                }else{
+                    result = grossSalary;
+                }
+            document.getElementById("idResult").value = "Result: " + result;
+            }
+        </script>
+    </body>
+</html>

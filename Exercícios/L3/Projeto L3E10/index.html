@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L3E10</title>
+    </head>
+    <body>
+        <h1 align="center">Login</h1>
+        <hr><br><br>
+        <form action="" align="center">
+            <fieldset>
+                <label for="idUser">User</label><br>
+                <input type="text" id="idUser" name="nmUser" autocomplete="on">
+                <br><br>
+
+                <label for="idPassword">Password</label><br>
+                <input type="text" id="idPassword" name="nmPassword" minlength="8" maxlength="15" autocomplete="off" pattern="^(?=.[A-Z])(?=.[a-z])(?=.[0-9])(?=.[@#$])[a-zA-Z0-9@#$]{8,15}$">                
+
+                <br><br>
+                <input type="button" id="idLogin" value="Login" onclick="login()">
+                <input type="button" id="idRecoverPassword" value="Recover password">
+                <br><br>
+
+                <output id="idResult">****</output>
+
+            </fieldset>
+        </form>
+        <script>
+
+            var user1 = "E21Aluno1";
+            var user2 = "E21Aluno2";
+            var user3 = "E21Aluno3";
+
+            var password1 = "Trocar123";
+            var password2 = "Senha@123";
+            var password3 = "123Trocar";
+
+            var i = 0;
+
+            function login(){
+                var user = document.getElementById("idUser").value;
+                var password = document.getElementById("idPassword").value;
+
+                if (i < 3) {
+                    if ((user != user1) &&  (user != user2) &&  (user != user3)) {
+                        result = "Unregistered user";
+                    }
+                    if (((user == user1) && (password != password1))
+                    || ((user == user2) && (password != password2))
+                    || ((user == user3) && (password != password3))) {
+                        result = "Incorrect password";
+                    }
+                    if (((user == user1) && (password == password1)) 
+                    || ((user == user2) && (password == password2))
+                    || ((user == user3) && (password == password3))) {
+                        result = "Allowed access";
+                    }
+                } else {
+                    result = "Blocked user"
+                }
+                i++
+
+            document.getElementById("idResult").value = "** " + result + " **";
+            }
+
+
+
+        </script>
+        
+    </body>
+</html>

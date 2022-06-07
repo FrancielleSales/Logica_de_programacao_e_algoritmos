@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L3E1</title>
+    </head>
+    <body>
+        <h1 align="center">What is the biggest number?</h1>
+        <hr><br>
+        
+        <form action="" align="center">
+            <label for="idNumber1">Enter the first number:</label><br>
+            <input type="number" id="idNumber1" name="nmNumber1">
+            <br><br>
+
+            <label for="idNumber2">Enter the second number:</label><br>
+            <input type="number" id="idNumber2" name="nmNumber2">
+            <br><br>
+
+            <input type="button" id="idCheck" value="Check" onclick="checkNumbers()">
+            <br><br>
+
+            <output id="idResult">Result:</output>
+        </form>
+        <script>
+            function checkNumbers(){
+                var number1 = Number(document.getElementById("idNumber1").value);
+                var number2 = Number(document.getElementById("idNumber2").value);
+                var result;
+
+                if(number1 > number2){
+                    result = "The first number is bigger!";
+                }else{
+                    result = "The second number is bigger!";
+                }
+            document.getElementById("idResult").value = "Result: " + result;
+            }
+        </script>
+    </body>
+</html>

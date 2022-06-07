@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L3E9</title>
+    </head>
+    <body>
+
+		<h1 align="center">Calculate the area</h1>
+		<hr>
+
+	    <form action="" align="center">
+
+            <input type="radio" name="nmGeoForm" id="idCircle" checked>
+            <label for="idCircle">Circle</label>
+            <br>
+
+            <input type="radio" name="nmGeoForm" id="idRectangle">
+            <label for="idRectangle">Rectangle</label>
+            <br>
+
+            <input type="radio" name="nmGeoForm" id="idRTriangle">
+            <label for="idRTriangle">Rectangle Triangle</label>
+            <br>
+
+            <input type="radio" name="nmGeoForm" id="idETriangle">
+            <label for="idETriangle">Equilateral Triangle</label>
+            <br><br>
+
+            <input type="button" value="Choose" onclick="chooseGeoForm()">
+            <br><br>
+
+            <label for="idBaseM" id="idLbBaseM">Radius</label><br>
+            <input type="number" id="idBaseM" name="nmBaseM" step="0.01">
+            <br><br>
+
+            <label for="idHeightM" id="idLbHeightM">Height</label><br>
+            <input type="number" id="idHeightM" name="nmHeightM" step="0.01">
+            <br><br>
+
+            <input type="button" value="Calculate" onclick="calculateArea()">
+            <br><br>
+
+            <output id="idOut">Area</output>
+            <br><br>
+
+        </form>
+
+        <script>
+
+            function chooseGeoForm(){
+                const Circle = document.getElementById("idCircle").checked;
+                const Rectangle = document.getElementById("idRectangle").checked;
+                const RTriangle = document.getElementById("idRTriangle").checked;
+                const ETriangle = document.getElementById("idETriangle").checked;
+                
+                if(Circle){
+                    document.getElementById("idLbHeightM").hidden = true;
+                    document.getElementById("idHeightM").hidden = true;
+                    document.getElementById("idLbBaseM").innerText = "Radius (m)"
+                }else if(Rectangle){
+                    document.getElementById("idLbHeightM").hidden = false;
+                    document.getElementById("idHeightM").hidden = false;
+                    document.getElementById("idLbBaseM").innerText = "Base (m)"
+                    document.getElementById("idLbHeightM").innerText = "Height (m)"
+
+                }else if(RTriangle){
+                    document.getElementById("idLbHeightM").hidden = false;
+                    document.getElementById("idHeightM").hidden = false;
+                    document.getElementById("idLbBaseM").innerText = "Base (m)"
+                    document.getElementById("idLbHeightM").innerText = "Height (m)"
+                    
+                }else if (ETriangle){
+                    document.getElementById("idLbHeightM").hidden = true;
+                    document.getElementById("idHeightM").hidden = true;
+                    document.getElementById("idLbBaseM").innerText = "Side (m)"
+                    document.getElementById("idLbHeightM").innerText = "Height (m)"
+                }
+                
+	        }
+
+            function calculateArea(){
+                const Circle = document.getElementById("idCircle").checked;
+                const Rectangle = document.getElementById("idRectangle").checked;
+                const RTriangle = document.getElementById("idRTriangle").checked;
+                const ETriangle = document.getElementById("idETriangle").checked;
+                const BaseM = Number(document.getElementById("idBaseM").value);
+                const HeightM = Number(document.getElementById("idHeightM").value);
+                let area
+
+                if(Circle){
+                    area = (BaseM **2) * Math.PI;
+                }else if(Rectangle) {
+                    area = BaseM * HeightM;
+                }else if(RTriangle) {
+                    area = (BaseM * HeightM)/2;
+                }else if(ETriangle){
+                    area = ((BaseM **2) * (3 **(1/2)))/4;
+                }
+
+                document.getElementById("idOut").value = "Area: " + area + " m²";
+            }
+
+        </script>
+        
+    </body>
+</html>

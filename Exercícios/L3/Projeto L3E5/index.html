@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L3E5</title>
+    </head>
+    <body>
+        <h1 align="center">Sort the numbers in descending order</h1>
+        <hr><br>
+        
+        <form action="" align="center">
+            <label for="idNumber1">Enter the first number:</label><br>
+            <input type="number" id="idNumber1" name="nmNumber1">
+            <br><br>
+
+            <label for="idNumber2">Enter the second number:</label><br>
+            <input type="number" id="idNumber2" name="nmNumber2">
+            <br><br>
+
+            <label for="idNumber3">Enter the third number:</label><br>
+            <input type="number" id="idNumber3" name="nmNumber3">
+            <br><br>
+
+            <input type="button" id="idCheck" value="Check" onclick="checkNumbers()">
+            <br><br>
+
+            <output id="idResult">Result:</output>
+        </form>
+        <script>
+            function checkNumbers(){
+                var number1 = Number(document.getElementById("idNumber1").value);
+                var number2 = Number(document.getElementById("idNumber2").value);
+                var number3 = Number(document.getElementById("idNumber3").value);
+                var smallestNumber;
+                var middleNumber;
+                var higherNumber;
+
+                if (number1 > number2){
+                    if(number1 > number3){
+                        if(number2 > number3){
+                            smallestNumber = number3;
+                            middleNumber = number2;
+                            higherNumber = number1;  
+                        }else{
+                            smallestNumber = number2;
+                            middleNumber = number3;
+                            higherNumber = number1;  
+                        }
+                    }
+                    else{
+                        smallestNumber = number2;
+                        middleNumber = number1;
+                        higherNumber = number3;   
+                    }
+                }else{
+                    if(number2 > number3){
+                        if(number1 > number3){
+                            smallestNumber = number3;
+                            middleNumber = number1;
+                            higherNumber = number2; 
+                        }else{
+                            smallestNumber = number1;
+                            middleNumber = number3;
+                            higherNumber = number2; 
+                        }
+                    }
+                    else{
+                        smallestNumber = number1;
+                        middleNumber = number2;
+                        higherNumber = number3; 
+                    }
+                }
+
+            document.getElementById("idResult").value = "Result: " + higherNumber + ", " + middleNumber + ", " + smallestNumber; 
+            }
+        </script>
+    </body>
+</html>
