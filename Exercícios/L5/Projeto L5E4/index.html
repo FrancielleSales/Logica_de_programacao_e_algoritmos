@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L5E4</title>
+    </head>
+    <body>
+
+		<h1 align="center">Fibonacci sequence</h1>
+		<hr><br><br>
+
+	    <form action="" align="center">
+            <input type="button" value="Calculate Fibonacci Sequence" onclick="fibonacci()">
+            <br><br>
+
+            <output id="idFibonacciSequence">Fibonacci Sequence: </output>
+            <br><br>
+
+        </form>
+        <script>
+            function fibonacci(){
+                var result;
+
+                var numberPrint;
+                var currentyNumber = 1;
+                var previousNumber = 1;
+                var numberBeforeThePrevious = 0;
+
+                for(var i = 0; i < 10; i++){
+
+                    if(i < 1){
+                        numberPrint = 1 + " ";
+
+                    }else{
+                        currentyNumber = previousNumber + numberBeforeThePrevious;
+                        numberPrint = numberPrint + currentyNumber + " ";
+                        console.log(currentyNumber);
+                        numberBeforeThePrevious = previousNumber;
+                        previousNumber = currentyNumber;
+                    }
+                }
+                document.getElementById("idFibonacciSequence").value = "Fibonacci sequence: " + numberPrint;
+            }
+        </script>
+    </body>
+</html>
