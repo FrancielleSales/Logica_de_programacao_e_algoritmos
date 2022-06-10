@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L4E3</title>
+    </head>
+    <body>
+        <h1 align="center">Multiples of 4</h1>
+        <hr><br>
+        <form action="" align="center">
+            <input type="button" id="idloopFor" value="For" onclick="loopFor()">
+            <br><br>
+            <output id="idResultFor">Result for: </output>
+            <br><br><br><br>
+
+            <input type="button" id="idloopWhile" value="While" onclick="loopWhile()">
+            <br><br>
+            <output id="idResultWhile">Result while: </output>
+        </form> 
+        <script>
+            function loopFor(){
+
+                var numberPrint = "";
+
+                for(var i = 0; i <= 20; i = i + 4){
+                    numberPrint = numberPrint + i + " ";
+                }
+
+                document.getElementById("idResultFor").value = "Start " + numberPrint + " Ended";
+            }
+
+            function loopWhile(){
+
+                var i = 0;
+                var numberPrint = "";
+
+                while (i <= 20){
+                    numberPrint = numberPrint + i + " ";
+                    i = i + 4;
+                }
+                document.getElementById("idResultWhile").value = "Start " + numberPrint + " Ended";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L4E6</title>
+    </head>
+    <body>
+        <h1 align="center">Highlight the multiples of 4</h1>
+        <hr><br>
+        <form action="" align="center">
+
+            <input type="button" id="idloopFor" value="For" onclick="loopFor()">
+            <br><br>
+            <output id="idResultFor">Result for: </output>
+            <br><br><br><br>
+
+            <input type="button" id="idloopWhile" value="While" onclick="loopWhile()">
+            <br><br>
+            <output id="idResultWhile">Result while: </output>
+        </form> 
+        <script>
+            function loopFor(){
+
+                var numberPrint = "";
+
+                for(var i = 30; i >= 0; i--){
+                    if(i % 4 == 0){
+                        numberPrint = numberPrint + "[" + i + "]" + " ";
+                    }else{
+                        numberPrint = numberPrint + i + " ";
+                    }
+                }
+
+                document.getElementById("idResultFor").value = numberPrint;
+
+            }
+
+            function loopWhile(){
+
+                var i = 30;
+                var numberPrint = "";
+
+                while (i >= 0){
+                    if(i % 4 == 0){
+                        numberPrint = numberPrint + "[" + i + "]" + " ";
+                    }else{
+                        numberPrint = numberPrint + i + " ";
+                    }
+                    i--;
+                }
+                document.getElementById("idResultWhile").value = numberPrint;
+            }
+
+        </script>
+    </body>
+</html>

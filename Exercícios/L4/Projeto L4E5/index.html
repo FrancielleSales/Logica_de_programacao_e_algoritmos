@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L4E5</title>
+    </head>
+    <body>
+        <h1 align="center">Count up to number entered</h1>
+        <hr><br>
+        <form action="" align="center">
+            <label for="idNumber">Enter the number:</label><br>
+            <input type="number" id="idNumber" name="nmNumber">
+            <br><br>
+
+            <input type="button" id="idloopFor" value="For" onclick="loopFor()">
+            <br><br>
+            <output id="idResultFor">Result for: </output>
+            <br><br><br><br>
+
+            <input type="button" id="idloopWhile" value="While" onclick="loopWhile()">
+            <br><br>
+            <output id="idResultWhile">Result while: </output>
+        </form> 
+        <script>
+            function loopFor(){
+
+                var numberPrint = "";
+                var number = Number(document.getElementById("idNumber").value);
+
+                for(var i = 0; i <= number; i++){
+                    numberPrint = numberPrint + i + " ";
+                }
+
+                document.getElementById("idResultFor").value = "Start " + numberPrint + " Ended";
+            }
+
+            function loopWhile(){
+
+                var i = 0;
+                var numberPrint = "";
+                var number = Number(document.getElementById("idNumber").value);
+
+                while (i <= number){
+                    numberPrint = numberPrint + i + " ";
+                    i++;
+                }
+                document.getElementById("idResultWhile").value = "Start " + numberPrint + " Ended";
+            }
+
+        </script>
+    </body>
+</html>

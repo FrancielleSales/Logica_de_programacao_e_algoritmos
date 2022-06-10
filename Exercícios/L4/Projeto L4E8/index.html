@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L4E8</title>
+    </head>
+    <body>
+        <h1 align="center">Show range numbers</h1>
+        <hr><br>
+        <form action="" align="center">
+            <label for="idStartingNumber">Enter the number that starts counting: </label><br>
+            <input type="number" id="idStartingNumber" name="nmStartingNumber">
+            <br><br>
+
+            <label for="idFinalNumber">Enter the number that ends the count: </label><br>
+            <input type="number" id="idFinalNumber" name="nmFinalNumber">
+            <br><br>
+
+            <label for="idIncrement">Enter the increment: </label><br>
+            <input type="number" id="idIncrement" name="nmIncrement">
+            <br><br>
+
+            <input type="button" id="idloopFor" value="For" onclick="loopFor()">
+            <br><br>
+            <output id="idResultFor">Result for: </output>
+            <br><br><br><br>
+
+            <input type="button" id="idloopWhile" value="While" onclick="loopWhile()">
+            <br><br>
+            <output id="idResultWhile">Result while: </output>
+        </form> 
+        <script>
+            function loopFor(){
+
+                var numberPrint = "";
+                var startingNumber = Number(document.getElementById("idStartingNumber").value);
+                var finalNumber = Number(document.getElementById("idFinalNumber").value);
+                var increment = Number(document.getElementById("idIncrement").value);
+
+                for(var i = startingNumber; i <= finalNumber; i = i + increment){
+                    numberPrint = numberPrint + i + " ";
+                }
+
+                document.getElementById("idResultFor").value = numberPrint + " Ended";
+            }
+
+            function loopWhile(){
+                var numberPrint = "";
+                var startingNumber = Number(document.getElementById("idStartingNumber").value);
+                var finalNumber = Number(document.getElementById("idFinalNumber").value);
+                var increment = Number(document.getElementById("idIncrement").value);
+
+                var i = startingNumber;
+
+                while (i <= finalNumber){
+                    numberPrint = numberPrint + i + " ";
+                    i = i + increment;
+                }
+                document.getElementById("idResultWhile").value = numberPrint + " Ended";
+            }
+
+        </script>
+    </body>
+</html>

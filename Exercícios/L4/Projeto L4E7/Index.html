@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L4E7</title>
+    </head>
+    <body>
+        <h1 align="center">Sum numbers</h1>
+        <hr><br>
+        <form action="" align="center">
+            <input type="button" id="idloopFor" value="For" onclick="loopFor()">
+            <br><br>
+            <output id="idResultFor">Result for: </output>
+            <br><br><br><br>
+
+            <input type="button" id="idloopWhile" value="While" onclick="loopWhile()">
+            <br><br>
+            <output id="idResultWhile">Result while: </output>
+        </form> 
+        <script>
+            function loopFor(){
+
+                var result = 0;
+
+                for(var i = 6; i <= 100; i = i + 2){
+                   result = result + i;
+                }
+
+                document.getElementById("idResultFor").value = result;
+
+            }
+
+            function loopWhile(){
+
+                var i = 6;
+                var result = 0;
+
+                while (i <= 100){
+                    result = result + i;
+                    i = i + 2;
+                }
+                document.getElementById("idResultWhile").value = result;
+            }
+
+        </script>
+    </body>
+</html>
