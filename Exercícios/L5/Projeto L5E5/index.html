@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L5E5</title>
+    </head>
+    <body>
+
+		<h1 align="center">Lower and higher prices</h1>
+		<hr><br><br>
+
+	    <form action="" align="center">
+            <label for="idPrice">Enter the prices:</label><br>
+            <input type="number" id="idPrice" name="nmPrice">
+            <br><br>
+
+            <input type="button" value="Enter" onclick="prices()">
+            <br><br>
+
+            <input type="button" value="Result" onclick="result()">
+            <br><br>
+
+            <output id="idLower">Lower: </output>
+            <br><br>
+
+            <output id="idHigher">Higher: </output>
+            <br><br>
+        </form>
+        <script>
+            var lowerPrice = + Infinity;
+            var higherPrice = -Infinity;
+            
+            function prices(){
+                var price = Number(document.getElementById("idPrice").value);
+
+                if(price < lowerPrice){
+                    lowerPrice = price;
+                }
+                if(price > higherPrice){
+                    higherPrice = price;
+                }
+            }
+            function result(){
+                document.getElementById("idLower").value = "Lower: " + lowerPrice;
+                document.getElementById("idHigher").value = "Higher: " + higherPrice;
+            }
+        </script>
+    </body>
+</html>

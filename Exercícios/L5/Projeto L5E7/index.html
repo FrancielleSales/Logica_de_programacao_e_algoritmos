@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L5E7</title>
+    </head>
+    <body>
+
+		<h1 align="center">Guess the number!</h1>
+		<hr><br><br>
+
+	    <form action="" align="center">
+            <label for="idGuess">Type the guess:</label><br>
+            <input type="number" id="idGuess" name="nmGuess">
+            <br><br>
+
+            <input type="button" value="Enter" onclick="guess()">
+            <br><br>
+
+            <output id="idResult">Result: </output>
+            <br>
+
+            <output id="idComparation">Comparation: </output>
+            <br>
+
+            <output id="idAttempts">Attempts: </output>
+            <br>
+        </form>
+        <script>
+            var i = 0;
+            var attempts = 3;
+         
+            function guess(){
+
+                if(i < 3){
+
+                    var guess = Number(document.getElementById("idGuess").value);
+                    var number = Math.floor(Math.random() * 10);
+                    console.log(number);
+                    var result;
+                    var comparation;
+
+                    if (number == 0){
+                        number = 1;
+                    }
+
+                    if(guess == number){
+                        result = "Right answer, congratulations!";
+                    }else{
+                        result = "Incorrect answer!";
+                    }
+
+                    if(guess > number){
+                        comparation = "The number entered is greater";
+                    }else if(guess < number){
+                        comparation = "The number entered is smaller";
+                    }else{
+                        comparation = "The number entered is equal";
+                    }
+
+                    i++;
+                    attempts--;
+
+                    document.getElementById("idResult").value = "Result: " + result;
+                    document.getElementById("idComparation").value = "Comparation: " + comparation;
+                    document.getElementById("idAttempts").value = "Attempts: " + attempts;
+
+                }else{
+                    document.getElementById("idResult").value = "Result: Game over";
+                    document.getElementById("idComparation").value = "Restart the game to try again";
+                    document.getElementById("idAttempts").value = "Attempts: 0"
+                }
+
+
+
+            }
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L5E6</title>
+    </head>
+    <body>
+
+		<h1 align="center">Ages</h1>
+		<hr><br><br>
+
+	    <form action="" align="center">
+            <label for="idAge">Enter the age:</label><br>
+            <input type="number" id="idAge" name="nmAge">
+            <br><br>
+
+            <input type="button" value="Enter" onclick="enterAges()">
+            <br><br>
+
+            <input type="button" value="Result" onclick="resultsAges()">
+            <br><br>
+
+            <output id="idAverageAge">Average age: </output>
+            <br>
+
+            <output id="idOver18">Number of people over 18 years old: </output>
+            <br>
+
+            <output id="idUnder5">Number of people under 5 years old: </output>
+            <br>
+
+            <output id="idHigherAge">Higher age: </output>
+            <br>
+        </form>
+        <script>
+                var over18 = 0;
+                var under5 = 0;
+                var averageAge;
+                var higherAge = -Infinity;
+
+                var i = 1;
+                var sumAges = 0;
+         
+            function enterAges(){
+
+                let age = Number(document.getElementById("idAge").value);
+
+                console.log(age);
+
+                sumAges = sumAges + age;
+                averageAge = sumAges / i;
+                i++;
+                console.log(sumAges);
+                console.log(averageAge);
+                console.log(i);
+
+                if(age < 5){
+                    under5++;
+                    console.log(under5);
+                }
+                if(age > 18){
+                    over18++;
+                    console.log(over18);
+                }
+                if(age > higherAge){
+                    higherAge = age;
+                    console.log(higherAge);
+                }
+            }
+            function resultsAges(){
+                document.getElementById("idAverageAge").value = "Average age: " + averageAge;
+                document.getElementById("idOver18").value = "Number of people over 18 years old: " + over18;
+                document.getElementById("idUnder5").value = "Number of people under 5 years old: " + under5;
+                document.getElementById("idHigherAge").value = "Higher age: " + higherAge;
+            }
+        </script>
+    </body>
+</html>
