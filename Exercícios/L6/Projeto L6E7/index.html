@@ -21,26 +21,23 @@
         </form>
 
         <script>
-		var names = [];
+            var names = [];
 
-        function include(){
-            let name = document.getElementById("idName").value;
-            names.push(name);
-            document.getElementById("idName").value = "";
-            console.log(names);
-        }
+            function include(){
+                let name = document.getElementById("idName").value;
+                names.push(name);
+                console.log(names);
+            }
 
-        function report(){
-            var length = 7;
-            let invertedNames = [];
+            function report(){
+                var length = 7;
+                let invertedNames = [];
 
-            for(i = 0; i < length; i++){
-			    invertedNames.unshift(names[i]);
-			    console.log(invertedNames);
-		    }
-
-        }    
-	</script>
-        
+                for(i = 0; i < length; i++){
+                    invertedNames.unshift(names[i]);
+                    console.log(invertedNames);
+                }
+            }    
+	    </script>    
     </body>
 </html>

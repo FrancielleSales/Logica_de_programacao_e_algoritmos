@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L6E10</title>
+    </head>
+    <body>
+
+		<h1 align="center">Random numbers</h1>
+		<hr><br><br>
+
+	    <form action="" align="center">
+
+            <input type="button" value="Create array" onclick="createArray()">
+            <br><br>
+
+            <label for="idKeyNumber">Enter key number: </label><br>
+            <input type="number" id="idKeyNumber" name="KeyNumber">
+            <br><br>
+
+            <input type="button" value="Report" onclick="report()">
+            <br><br>
+
+            <output id="idArray">Array: </output>
+            <br><br>
+
+            <output id="idPositionsOfTheKey">Positions of the key: </output>
+            <br><br>
+
+            <output id="idRepetitions">Number of repetitions: </output>
+        </form>
+
+        <script>
+            var numbers = [];
+            var evenNumbers = [];
+            var positions = [];
+            var length = 30;
+
+            function createArray(){
+
+                for(let i = 0; i < length; i++){
+                    let number = Math.floor(Math.random()*15);
+
+                    if (number == 0){
+                        number = 1;
+                    }
+                    numbers.push(number);
+                }
+            }
+            function report(){
+
+                let positions = [];
+                let repetitions = 0;
+
+                let keyNumber= Number(document.getElementById("idKeyNumber").value);
+
+                for(let i = 0; i < numbers.length; i++)
+                    if (numbers[i] == keyNumber){
+                        positions.push(i + 1);
+                        repetitions = repetitions + 1;
+                    }
+                document.getElementById("idArray").innerHTML = "Array: " + numbers;
+                document.getElementById("idPositionsOfTheKey").innerHTML = "Positions of the key: " + positions;
+                document.getElementById("idRepetitions").innerHTML = "Number of repetitions: " + repetitions;
+                }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L6E8</title>
+    </head>
+    <body>
+
+		<h1 align="center">Multiples of 10</h1>
+		<hr><br><br>
+
+	    <form action="" align="center">
+            <label for="idNumbers">Enter the numbers: </label><br>
+            <input type="number" id="idNumbers" name="nmNumbers">
+            <br><br>
+
+            <input type="button" value="Include" onclick="include()">
+            <input type="button" value="Report" onclick="report()">
+            <br><br>
+          
+            <output id="idArray">Array: </output>
+            <br><br>
+
+            <output id="idMultiples">Multiples of 10: </output>
+        </form>
+
+        <script>
+            var numbers = [];
+            var multiplesNumbers = [];
+
+            function include(){
+
+                let number = Number(document.getElementById("idNumbers").value);
+                numbers.push(number);
+            }
+            function report(){
+
+                for(let i = 0; i < numbers.length; i++)
+                    if (numbers[i] % 10 == 0){
+                        let  number = numbers[i];
+                        multiplesNumbers.push(number);
+                    }
+                document.getElementById("idArray").innerHTML = "Array: " + numbers;
+                document.getElementById("idMultiples").innerHTML = "Multiples of 10: " + multiplesNumbers;
+                }
+        </script>
+    </body>
+</html>

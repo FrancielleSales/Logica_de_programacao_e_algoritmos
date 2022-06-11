@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>L6E9</title>
+    </head>
+    <body>
+
+		<h1 align="center">Even numbers</h1>
+		<hr><br><br>
+
+	    <form action="" align="center">
+            <label for="idNumbers">Enter the numbers: </label><br>
+            <input type="number" id="idNumbers" name="nmNumbers">
+            <br><br>
+
+            <input type="button" value="Include" onclick="include()">
+            <input type="button" value="Report" onclick="report()">
+            <br><br>
+          
+            <output id="idArray">Array: </output>
+            <br><br>
+
+            <output id="idEvenNumbers">Even numbers: </output>
+            <br><br>
+
+            <output id="idPositionsNumbers">Positions of even numbers: </output>
+        </form>
+
+        <script>
+            var numbers = [];
+            var evenNumbers = [];
+            var positions = [];
+
+            function include(){
+
+                let number = Number(document.getElementById("idNumbers").value);
+                numbers.push(number);
+            }
+            function report(){
+
+                for(let i = 0; i < numbers.length; i++)
+                    if (numbers[i] % 2 == 0){
+                        let  evenNumber = numbers[i];
+                        evenNumbers.push(evenNumber);
+                        positions.push(i);
+                    }
+                document.getElementById("idArray").innerHTML = "Array: " + numbers;
+                document.getElementById("idEvenNumbers").innerHTML = "Even numbers:" + evenNumbers;
+                document.getElementById("idPositionsNumbers").innerHTML = "Positions of even numbers: " + positions;
+                }
+        </script>
+    </body>
+</html>
