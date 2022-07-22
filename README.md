@@ -15,8 +15,6 @@ A criadora desse repositório é a Francielle Eliete Sales, graduada em engenhar
     <a href="mailto:franciellesales0@gmail.com" target-"_blank"><img src= "https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
     <a href="https://www.linkedin.com/in/francielleelietesales" target-"_blank"><img src= "https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
     <a href="https://web.whatsapp.com/send?phone=5548991199533" target-"_blank"><img src= "https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"></a>
-    <a href="https://t.me/@francielleesales" target-"_blank"><img src= "https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"></a>
-    <a href="https://www.instagram.com/francielleesales/" target-"_blank"><img src= "https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
 </div>
 
 # Índice 
@@ -24,14 +22,6 @@ A criadora desse repositório é a Francielle Eliete Sales, graduada em engenhar
 * [Ferramentas](#ferramentas)
 * [Capítulo 1: Ambientação e metodologias ágeis](#capitulo1)
 * [Capítulo 2: Lógica de programação](#capitulo2)
-* [Capítulo 3: Programação orientada a objetos](#capitulo3)
-* [Capítulo 4 Java avançado](#capitulo4)
-* [Capítulo 5: Banco de dados relacional](#capitulo5)
-* [Capítulo 6: HTML e CSS](#capitulo6)
-* [Capítulo 7: Introdução ao Javascript](#capitulo7)
-* [Capítulo 8: Typescript](#capitulo8)
-* [Capítulo 9: Angular](#capitulo9)
-* [Capítulo 10: Spring Framework](#capitulo10)
 
 > :construction: Projeto em construção :construction:
 
