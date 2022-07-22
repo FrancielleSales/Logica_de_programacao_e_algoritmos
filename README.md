@@ -212,41 +212,4 @@ São duas ferramentas que podem ser usadas em conjunto. O Git é utilizado para 
 <img src = "https://user-images.githubusercontent.com/100395899/167313429-7939f64a-0f35-4b8d-b14c-0f7fd667566d.png" width="400px" hight="300px">
 </p>
 
-## Prompt de comando
-
-O prompt de comando é um aplicativo que permite a execução de comandos com o intuito de executar e automatizar tarefas.
-
-### Principais comandos utilizados no prompt do Windows
-
-- cd nomeDiretório: abre o diretório com nome nomeDiretório;
-- cd ..: volta para o diretório anterior;
-- dir: mostra o que tem no diretório;
-- mkdir: cria um diretório;
-- ren: nomeAtual nomeNovo: substitui o nome nomeAtual de um arquivo ou diretório pelo nome nomeNovo;
-- cls: limpa a tela do prompt;
-- del nomeArquivo.extensãoArquivo: apaga o arquivo;
-- help: lista todos os comandos;
-- help nomeComando: mostra as possibilidades de utilização para o comando nomeComando;
-- type nomeArquivo.extensãoArquivo: abre o arquivo;
-- type NUL > nomeArquivo.extensãoArquivo: cria um arquivo vazio na pasta;
-- copy con nomeArquivo.extensãoArquivo: editar um arquivo pela primeira vez (usa-se ctrl+z para salvar as alterações);
-- RD S/ nomeDiretório: apaga o diretório e todos arquivos contidos nele.
-
-<p>
-<a href="https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/windows-commands"> Clique aqui para saber todos os comandos do Windows</a></p>
-<p>
-<a href="https://www.cos.ufrj.br/~bfgoldstein/python/comandos_basicos_linux.pdf"> Clique aqui para saber os principais comandos usados no Linux</a></p>
-<p>
-<a href="https://www.researchgate.net/profile/Alessandro-Andrade-2/publication/309219831_MAC_OS_X_Comandos_Basicos_e_Avancados/links/580618b608aeb85ac85f141c/MAC-OS-X-Comandos-Basicos-e-Avancados.pdf
-"> Clique aqui para saber os principais comandos usados no MAC OSX</a>
-</p>
-
 # Capítulo 2: Lógica de programação <a name="capitulo2"></a>
-# Capítulo 3: Programação orientada a objetos <a name="capitulo3"></a>
-# Capítulo 4 Java avançado <a name="capitulo4"></a>
-# Capítulo 5: Banco de dados relacional <a name="capitulo5"></a>
-# Capítulo 6: HTML e CSS <a name="capitulo6"></a>
-# Capítulo 7: Introdução ao Javascript <a name="capitulo7"></a>
-# Capítulo 8: Typescript <a name="capitulo8"></a>
-# Capítulo 9: Angular <a name="capitulo9"></a>
-# Capítulo 10: Spring Framework <a name="capitulo10"></a>
