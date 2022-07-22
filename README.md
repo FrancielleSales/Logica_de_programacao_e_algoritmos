@@ -29,21 +29,15 @@ A criadora desse repositório é a Francielle Eliete Sales, graduada em engenhar
 
 Segue a listagem das principais ferramentas utilizadas ao longo do treinamento:
 
-- Angular;
-- CSS;
 - Git;
 - GitHub;
 - HTML;
-- Java;
 - Javascript;
 - Kanban;
+- Manifesto ágil;
 - Markdown;
 - Scrum;
-- Spring
-- Trello;
-- Typescript;
-- Visual Studio Code;
-- Xampp.
+- Trello.
 
 # Capítulo 1: Ambientação e metodologias ágeis <a name="capitulo1"></a>
 
